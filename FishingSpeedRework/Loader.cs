@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using HarmonyLib;
+using System.Reflection;
 
 namespace FishingSpeedRework
 {
@@ -8,10 +10,8 @@ namespace FishingSpeedRework
 		/// This method is run by Winch to initialize your mod
 		/// </summary>
 		public static void Initialize()
-		{
-			var gameObject = new GameObject(nameof(FishingSpeedRework));
-			gameObject.AddComponent<FishingSpeedRework>();
-			GameObject.DontDestroyOnLoad(gameObject);
-		}
+        {
+            new Harmony("com.Johncook.RemovePlayerMapMarker").PatchAll(Assembly.GetExecutingAssembly());
+        }
 	}
 }
