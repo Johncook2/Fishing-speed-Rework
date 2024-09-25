@@ -1,0 +1,9 @@
+{
+	"Author": "Johncook2",
+	"Name": "Fishing Speed Rework",
+	"ModGUID": "Johncook2.FishingSpeedRework",
+	"Version": "0.0.1",
+	"ModAssembly": "FishingSpeedRework.dll",
+	"MinWinchVersion": "0.4.0",
+	"Entrypoint": "FishingSpeedRework.Loader/Initialize"
+}
