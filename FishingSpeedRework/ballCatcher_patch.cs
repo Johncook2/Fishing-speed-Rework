@@ -5,11 +5,11 @@ using System.CodeDom;
 
 namespace FishingSpeedRework.BallCatcherminigame.Patches
 {
-	[HarmonyPatch(typeof(BallCatcherminigame), "StartGame")]
+	[HarmonyPatch(typeof(BallCatcherMinigame), "StartGame")]
 	public static class BallCatcherminigame_StartGame_Patch
 	{
         [HarmonyPostfix]
-    	static void StartGame(BallCatcherminigame __instance)
+    	static void StartGame(BallCatcherMinigame __instance)
 		{
 			__instance.equipmentSpeed = (float)1;
 		}
@@ -21,10 +21,10 @@ namespace FishingSpeedRework.BallCatcherminigame.Patches
         [HarmonyPostfix]
     	static void Init(BallCatcherBall __instance)
 		{
-			
 
-            if (__instance.speed > 0) { __instance.speed = 1 * GameManager.Instance.PlayerStats.MinigameFishingSpeedModifier; }
-	    if (__instance.speed < 0) { __instance.speed = -1 * GameManager.Instance.PlayerStats.MinigameFishingSpeedModifier; }
+
+			if (__instance.speed > 0) { __instance.speed = 1 * GameManager.Instance.PlayerStats.MinigameFishingSpeedModifier; }
+			if (__instance.speed < 0) { __instance.speed = -1 * GameManager.Instance.PlayerStats.MinigameFishingSpeedModifier; }
 		}
 	}
 }
