@@ -23,8 +23,8 @@ namespace FishingSpeedRework.BallCatcherminigame.Patches
 		{
 
 
-			if (__instance.speed > 0) { __instance.speed = 1 * GameManager.Instance.PlayerStats.MinigameFishingSpeedModifier; }
-			if (__instance.speed < 0) { __instance.speed = -1 * GameManager.Instance.PlayerStats.MinigameFishingSpeedModifier; }
+			if (__instance.speed > 0) { __instance.speed = BallCatcherMinigame.baseSpeed * GameManager.Instance.PlayerStats.MinigameFishingSpeedModifier; }
+			if (__instance.speed < 0) { __instance.speed = -BallCatcherMinigame.baseSpeed * GameManager.Instance.PlayerStats.MinigameFishingSpeedModifier; }
 		}
 	}
 }
