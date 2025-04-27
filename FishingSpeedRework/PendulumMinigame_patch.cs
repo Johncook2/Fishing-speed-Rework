@@ -3,7 +3,7 @@ using Winch.Core;
 using HarmonyLib;
 using System.CodeDom;
 
-namespace FishingSpeedRework.PendulumMinigame.Patches
+namespace FishingSpeedRework.Pendulumminigame.Patches
 {
 	[HarmonyPatch(typeof(PendulumMinigame), "StartGame")]
 	public static class PendulumMinigame_StartGame_Patch
@@ -21,14 +21,14 @@ namespace FishingSpeedRework.PendulumMinigame.Patches
         [HarmonyPrefix]
     	static void Update(PendulumMinigame __instance)
 		{
-			if (this.isPendulumSwingingRight)
+			if (__instance.isPendulumSwingingRight)
 			{
-				this.indicatorAngle -= -this.difficultyConfig.rotationSpeed * Time.deltaTime + __instance.difficultyConfig.rotationSpeed * Time.deltaTime * GameManager.Instance.PlayerStats.MinigameFishingSpeedModifier;
+				__instance.indicatorAngle += __instance.difficultyConfig.rotationSpeed * Time.deltaTime + -1 * Time.deltaTime * GameManager.Instance.PlayerStats.MinigameFishingSpeedModifier;
 				
 			}
 			else
 			{
-				this.indicatorAngle += -this.difficultyConfig.rotationSpeed * Time.deltaTime + __instance.difficultyConfig.rotationSpeed * Time.deltaTime * GameManager.Instance.PlayerStats.MinigameFishingSpeedModifier;
+				__instance.indicatorAngle -= __instance.difficultyConfig.rotationSpeed * Time.deltaTime + -1 * Time.deltaTime * GameManager.Instance.PlayerStats.MinigameFishingSpeedModifier;
 				
 			}
 		}
