@@ -102,8 +102,4 @@ jobs:
                 artifacts: "${{ env.PROJ_USERNAME}}.${{ env.PROJ_NAME }}.zip"
                 draft: true
                 prerelease: ${{ inputs.prerelease }}
-                name: v${{ needs.pre_job.outputs.version }}
-                omitBodyDuringUpdate: true
-                artifacts: "${{ env.PROJ_USERNAME}}.${{ env.PROJ_NAME }}.zip"
-                draft: true
-                prerelease: ${{ inputs.prerelease }}
+                
