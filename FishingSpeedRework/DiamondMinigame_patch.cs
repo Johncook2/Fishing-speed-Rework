@@ -22,7 +22,7 @@ namespace FishingSpeedRework.Diamondminigame.Patches
     	static void Update(DiamondMinigame __instance)
 		{
 
-			__instance.difficultyConfig.diamondRotation =  GameManager.Instance.PlayerStats.MinigameFishingSpeedModifier * 1
+			__instance.difficultyConfig.diamondRotation =  GameManager.Instance.PlayerStats.MinigameFishingSpeedModifier * 1;
 
 		}
 	}

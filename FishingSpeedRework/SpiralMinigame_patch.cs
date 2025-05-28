@@ -25,11 +25,11 @@ namespace FishingSpeedRework.Spiralminigame.Patches
                 if (__instance.movingForward)
 				{
                     __instance.currentBallProgressProp += __instance.baseSpeed * Time.deltaTime * GameManager.Instance.PlayerStats.MinigameFishingSpeedModifier - __instance.difficultyConfig.spiralRotationSpeed * Time.deltaTime * __instance.baseSpeed;
-			}
+				}
             else { 
                 __instance.currentBallProgressProp -= __instance.baseSpeed * Time.deltaTime * GameManager.Instance.PlayerStats.MinigameFishingSpeedModifier - __instance.difficultyConfig.spiralRotationSpeed * Time.deltaTime * __instance.baseSpeed;
-
-            }
+				}
+			}
 		}
 	}
 }
