@@ -22,7 +22,7 @@ namespace FishingSpeedRework.Fishminigame.Patches
     	static void Update(FishMinigame __instance)
 		{
 			if (__instance.isGameRunning) {
-				__instance.indicatorAngle += -1 * Time.deltaTime * GameManager.Instance.PlayerStats.MinigameFishingSpeedModifier + __instance.difficultyConfig.rotationSpeed * Time.deltaTime;
+				__instance.indicatorAngle += -10 * Time.deltaTime * GameManager.Instance.PlayerStats.MinigameFishingSpeedModifier + __instance.difficultyConfig.rotationSpeed * Time.deltaTime;
 			}
 		}
 	}
