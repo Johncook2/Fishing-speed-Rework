@@ -11,7 +11,7 @@ namespace FishingSpeedRework
 		/// </summary>
 		public static void Initialize()
         {
-            new Harmony("com.Johncook.RemovePlayerMapMarker").PatchAll(Assembly.GetExecutingAssembly());
+            new Harmony("com.Johncook.FishingSpeedRework").PatchAll(Assembly.GetExecutingAssembly());
         }
 	}
 }
