@@ -18,16 +18,16 @@ namespace FishingSpeedRework.Spiralminigame.Patches
 	[HarmonyPatch(typeof(SpiralMinigame), "Update")]
 	public static class SpiralMinigame_Update_Patch
 	{
-        [HarmonyPostfix]
+        [HarmonyPrefix]
     	static void Update(SpiralMinigame __instance)
 		{
 			if (__instance.isGameRunning) {
                 if (__instance.movingForward)
 				{
-                    __instance.currentBallProgressProp += __instance.baseSpeed * Time.deltaTime * GameManager.Instance.PlayerStats.MinigameFishingSpeedModifier - __instance.difficultyConfig.spiralRotationSpeed * Time.deltaTime * __instance.baseSpeed;
+                    __instance.currentBallProgressProp += __instance.baseSpeed * Time.deltaTime * GameManager.Instance.PlayerStats.MinigameFishingSpeedModifier*10 - __instance.difficultyConfig.spiralRotationSpeed * Time.deltaTime * __instance.baseSpeed;
 				}
             else { 
-                __instance.currentBallProgressProp -= __instance.baseSpeed * Time.deltaTime * GameManager.Instance.PlayerStats.MinigameFishingSpeedModifier - __instance.difficultyConfig.spiralRotationSpeed * Time.deltaTime * __instance.baseSpeed;
+                __instance.currentBallProgressProp -= __instance.baseSpeed * Time.deltaTime * GameManager.Instance.PlayerStats.MinigameFishingSpeedModifier*10 - __instance.difficultyConfig.spiralRotationSpeed * Time.deltaTime * __instance.baseSpeed;
 				}
 			}
 		}
