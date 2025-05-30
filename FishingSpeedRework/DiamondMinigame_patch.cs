@@ -16,10 +16,10 @@ namespace FishingSpeedRework.Diamondminigame.Patches
 	}
 
 	[HarmonyPatch(typeof(DiamondMinigame), "Firetarget")]
-	public static class DiamondMinigame_Update_Patch
+	public static class DiamondMinigame_Firetarget_Patch
 	{
         [HarmonyPrefix]
-    	static void Update(DiamondMinigame __instance)
+    	static void Firetarget(DiamondMinigame __instance)
 		{
 
 			__instance.difficultyConfig.diamondRotation =  GameManager.Instance.PlayerStats.MinigameFishingSpeedModifier * 1;
