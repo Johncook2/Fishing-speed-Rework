@@ -15,17 +15,17 @@ namespace FishingSpeedRework.Diamondminigame.Patches
 		}
 	}
 
-	[HarmonyPatch(typeof(DiamondMinigame), "FireTarget")]
-	public static class DiamondMinigame_FireTarget_Patch
-	{
-		[HarmonyPrefix]
-		static void FireTarget(DiamondMinigame __instance)
-		{
+	// [HarmonyPatch(typeof(DiamondMinigame), "FireTarget")]
+	// public static class DiamondMinigame_FireTarget_Patch
+	// {
+	// 	[HarmonyPrefix]
+	// 	static void FireTarget(DiamondMinigame __instance)
+	// 	{
 
-			__instance.difficultyConfig.diamondScaleUpTimeSec = 1 / GameManager.Instance.PlayerStats.MinigameFishingSpeedModifier;
+	// 		__instance.difficultyConfig.diamondScaleUpTimeSec = 1 / GameManager.Instance.PlayerStats.MinigameFishingSpeedModifier;
 
-		}
-	}
+	// 	}
+	// }
 	
 	[HarmonyPatch(typeof(DiamondMinigame), "Update")]
 	public static class DiamondMinigame_Update_Patch
@@ -33,7 +33,7 @@ namespace FishingSpeedRework.Diamondminigame.Patches
         [HarmonyPrefix]
     	static void Update(DiamondMinigame __instance)
 		{
-			__instance.timeUntilNextTarget -= Time.deltaTime * GameManager.Instance.PlayerStats.MinigameFishingSpeedModifier + Time.deltaTime;
+			__instance.timeUntilNextTarget -= Time.deltaTime * GameManager.Instance.PlayerStats.MinigameFishingSpeedModifier / 5 + Time.deltaTime;
 		}
 	}
 }

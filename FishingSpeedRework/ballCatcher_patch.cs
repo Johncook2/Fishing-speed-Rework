@@ -34,7 +34,7 @@ namespace FishingSpeedRework.BallCatcherminigame.Patches
         [HarmonyPrefix]
     	static void Update(BallCatcherMinigame __instance)
 		{
-			__instance.ballDelaySec -= Time.deltaTime * GameManager.Instance.PlayerStats.MinigameFishingSpeedModifier + Time.deltaTime;
+			__instance.ballDelaySec -= Time.deltaTime * GameManager.Instance.PlayerStats.MinigameFishingSpeedModifier / 5 + Time.deltaTime;
 		}
 	}
 }
