@@ -28,7 +28,7 @@ namespace FishingSpeedRework.Pendulumminigame.Patches
 			}
 			else
 			{
-				__instance.indicatorAngle -= __instance.difficultyConfig.rotationSpeed * Time.deltaTime + -80 * Time.deltaTime * GameManager.Instance.PlayerStats.MinigameFishingSpeedModifier;
+				__instance.indicatorAngle -= __instance.difficultyConfig.rotationSpeed * Time.deltaTime + -80  * Time.deltaTime * GameManager.Instance.PlayerStats.MinigameFishingSpeedModifier;
 				
 			}
 		}
