@@ -33,7 +33,7 @@ namespace FishingSpeedRework.Diamondminigame.Patches
         [HarmonyPrefix]
     	static void Update(DiamondMinigame __instance)
 		{
-			__instance.timeUntilNextTarget -= Time.deltaTime * GameManager.Instance.PlayerStats.MinigameFishingSpeedModifier / 5 + Time.deltaTime;
+			__instance.timeUntilNextTarget -= Time.deltaTime * GameManager.Instance.PlayerStats.MinigameFishingSpeedModifier / 10 + Time.deltaTime;
 		}
 	}
 }

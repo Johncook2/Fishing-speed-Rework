@@ -46,7 +46,7 @@ namespace FishingSpeedRework.Fishminigame.Patches
 		{
 			__instance.progressChange = 1f / __instance.difficultyConfig.secondsToPassivelyCatch * Time.deltaTime;
 		}
-		__instance.progress += __instance.progressChange /3 - __instance.progressChange;
+		__instance.progress += __instance.progressChange /2 - __instance.progressChange;
 		}
 	}
 }
