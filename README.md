@@ -1,13 +1,11 @@
 # Fishing Speed Rework
-A Semi-finished Dredge mod about reworking fishing speed 
-
-## Idea
-Instead of having fishing speed increase the rate at which the fish on the left tracker moves up, it will instead increase the speed at which the indicator/targets move on the UI. This will make it possible to fish faster with a higher fishing speed, but also make it harder.
+A mostly finished Dredge mod about reworking fishing speed. Currently in beta testing to see if how the current values are. Feel free to test the mod as well as commenting on how it could be improved.
 
 ## Content
-+ Changes the effect of fishing speed on every fishing minigame
++ Causes fishing speeds to effect the movement speed in fishing minigames
++ Halved the speed in which you automatically catch fish
 
 ## Planned Content
 + Maybe reworking dredging too
-+ (Bonus) Having the fishing talisman revert all changes, so it will not make it impossible to fish
++ (Bonus) Having the fishing talisman revert all changes, so high fishing speed modifiers become a straight upgrade again.
 
